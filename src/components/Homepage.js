@@ -16,10 +16,6 @@ export default function Homepage() {
     })
   }, [])
 
-  const goList = () => {
-        navigate("/listpage");
-  };
-
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -33,7 +29,8 @@ export default function Homepage() {
   return (
     <div>
       <h1> Home Page</h1>
-      <button onClick={goList}>List Page</button>
+      <button onClick={() => navigate("/listpage")}>List Page</button>
+      <button onClick={() => navigate("/lottery")}>Lottery Page</button>
       <button onClick={handleSignOut}>Sign Out</button>
     </div>
   );
