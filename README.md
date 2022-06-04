@@ -6,6 +6,7 @@ Welcome to our project "Gambling Go Away" for LaunchHacks 2022.
 
 In the project directory, you can run:
 
+### `npm install firebase`
 ### `npm start`
 
 Runs the app in the development mode.\
