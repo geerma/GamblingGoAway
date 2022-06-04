@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.welcome {
+  color:lightskyblue;
+}
+
+.login-container {
+  color:salmon;
+}
