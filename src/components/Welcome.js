@@ -74,7 +74,10 @@ export default function Welcome() {
 
   return (
     <div className="welcome">
-      <h1>Welcome</h1>
+      <header className="header">
+        <h1>Gamble Go Away</h1>
+        <h2>A site for those trying not to gamble</h2>
+      </header>
       <div className="login-register-container">
         {isRegistering ? (
           <div>
@@ -126,15 +129,30 @@ export default function Welcome() {
             <button onClick={() => setIsRegistering(false)}>Go Back</button>
           </div>
         ) : (
-          <div>
-            <input type="email" onChange={handleEmailChange} value={email} />
+          <div className="container">
             <input
+              className="email"
+              type="email"
+              placeholder="email"
+              onChange={handleEmailChange}
+              value={email}
+            />
+            <input
+              className="password"
               type="password"
+              placeholder="password"
               onChange={handlePasswordChange}
               value={password}
             />
-            <button onClick={handleSignIn}>Sign In</button>
-            <button onClick={() => setIsRegistering(true)}>Register</button>
+            <button className="button-login" onClick={handleSignIn}>
+              Sign In
+            </button>
+            <button
+              className="button-register"
+              onClick={() => setIsRegistering(true)}
+            >
+              Register
+            </button>
           </div>
         )}
       </div>

@@ -1,4 +1,5 @@
 import './App.css';
+import './Welcome.css';
 import React from 'react';
 import Listpage from './components/Listpage';
 import Lottery from './components/Lottery';
