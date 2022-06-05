@@ -1,11 +1,11 @@
-.welcome {
+.welcomepage {
   position: absolute;
   top: 0px;
   bottom: 0px;
   color: lightskyblue;
   background-color: #E2ECE1;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .login-register-container {

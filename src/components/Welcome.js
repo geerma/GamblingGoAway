@@ -22,7 +22,7 @@ export default function Welcome() {
 
   const navigate = useNavigate();
 
-  useEffect((navigate) => {
+  useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
         navigate("/homepage");
@@ -73,7 +73,7 @@ export default function Welcome() {
   };
 
   return (
-    <div className="welcome">
+    <div className="welcomepage">
       <header className="header">
         <h1>Gamble Go Away</h1>
         <h2>A site for those trying not to gamble</h2>

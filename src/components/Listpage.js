@@ -26,7 +26,7 @@ export default function Listpage() {
     };
 
   return (
-    <div>
+    <div className="listpage">
       <div>
         <Title />
       </div>

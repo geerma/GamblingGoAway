@@ -56,11 +56,15 @@ export default function Homepage() {
 
   // Delete from Real-time Database
   const handleDelete = (uidd) => {
-    remove(ref(rtdb, `/${auth.currentUser.uid}/${uidd}`))
-  }
+    remove(ref(rtdb, `/${auth.currentUser.uid}/${uidd}`));
+  };
 
   return (
-    <div>
+    <div className="homepage">
+      <header className="header">
+        <h1>Gamble Go Away</h1>
+        <h2>A site for those trying not to gamble</h2>
+      </header>
       <h1> Home Page </h1>
 
       <button onClick={() => navigate("/slotmachine")}>Slot Machine</button>
@@ -80,7 +84,9 @@ export default function Homepage() {
         {personalDatas.map((personalData) => (
           <div key={personalData.uidd}>
             <h1>{personalData.personalData}</h1>
-            <button onClick={() => handleDelete(personalData.uidd)}>Delete</button>
+            <button onClick={() => handleDelete(personalData.uidd)}>
+              Delete
+            </button>
           </div>
         ))}
       </div>
