@@ -102,7 +102,7 @@ export default function Homepage() {
         </div>
       </div>
       </div>
-      <footer className="footer">©2022 Copyright by geerma lilyyao14. All Rights Reserved. Images from https://www.flaticon.com</footer>
+      <footer className="footer">©2022 Copyright by geerma and lily1. All Rights Reserved. Images from https://www.flaticon.com</footer>
     </div>
   );
 }
