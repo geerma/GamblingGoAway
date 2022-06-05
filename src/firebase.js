@@ -2,9 +2,13 @@ import {initializeApp} from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 import {getAuth} from "firebase/auth";
 
+import { getDatabase } from "firebase/database";
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyDFGlcXq2HfLrJoeHmUxhqSBuAAweGHaWg",
     authDomain: "launchhacks2022.firebaseapp.com",
+    databaseURL: "https://launchhacks2022-default-rtdb.firebaseio.com/",
     projectId: "launchhacks2022",
     storageBucket: "launchhacks2022.appspot.com",
     messagingSenderId: "259437755410",
@@ -12,7 +16,7 @@ const firebaseConfig = {
   };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+export const db = getFirestore(app); // Firestore for general database
 
-export {db};
+export const rtdb = getDatabase(app); // Real-time database for user-authenticated information
 export const auth = getAuth();
