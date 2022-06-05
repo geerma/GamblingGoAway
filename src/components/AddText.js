@@ -21,13 +21,11 @@ export default function AddText() {
             <div>
             <input
                 type="text"
-                placeholder="Enter text here..."
+                placeholder="Enter your message here"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
             />
-            </div>
-            <div>
-                <button className = "btn_add">Add</button>
+            <button>Send</button>
             </div>
         </form>
     )

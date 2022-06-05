@@ -7,14 +7,11 @@ export default function List({
   
   return (
     <div className="list">
-      <div>
+      <div className="individual-chats">
         {list.text}
+        <button onClick={() => handleDelete(list.id)}></button>
       </div>
-      <div>
-        <button onClick={() => handleDelete(list.id)}>
-          Delete
-        </button>
-      </div>
+      
     </div>
   );
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import Title from "./Title";
 import AddText from "./AddText";
 import List from "./List";
 import { collection, query, onSnapshot, doc, deleteDoc, } from "firebase/firestore";
 import { db } from "../firebase";
 
-export default function Listpage() {
+export default function Supportpage() {
 
     const [list, setList] = React.useState([]);
 
@@ -27,17 +26,19 @@ export default function Listpage() {
     };
 
   return (
-    <div className="listpage">
+    <div className="chatpage">
       <div>
-        <Title />
+        <h1>Support Group</h1>
+        <p>Welcome to the Support Group page! Joining a support group to meet and talk to others who have similar experiences can be one way of getting over your addiction.</p>
+        <p>Feel free to leave positive comments or use it as a real-time chat with other users. Please be respectful!</p>
       </div>
-      <div>
-        <AddText />
-      </div>
-      <div className="list_container">
+      <div className="chat-container">
         {list.map((list) => (
           <List key={list.id} list={list} handleDelete={handleDelete} />
         ))}
+      </div>
+      <div className="chattext">
+        <AddText />
       </div>
     </div>
   );

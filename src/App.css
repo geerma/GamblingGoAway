@@ -108,11 +108,49 @@
   width: 100vw;
 }
 
+.chattext {
+  width: 100vw;
+}
+
+.chattext input {
+  width: 30vw;
+  border-radius: 5px;
+}
+
+.chat-container {
+  background: #fffffd;  /* fallback for old browsers */
+  width: 70vw;
+  height: 70vh;
+  border: 1px solid #000;
+  margin: auto;
+}
+
+.individual-chats {
+  color: black;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  width: 30vw;
+  margin: auto;
+  margin-top: 8px;
+  background-color: #78C5EF;
+  border: 1px solid rgb(66, 65, 64);
+  border-radius: 80px;
+}
+
+
+.individual-chats button {
+  width: 5px;
+  height: 5px;
+  padding:0px;
+  background-color: #78C5EF;
+  border: 1px solid rgb(114, 181, 236);
+}
+
 /* Lottery Page */
 .lotterypage {
   position: relative;
   color: black;
-  background-color: #e2ece1;
+  background-color: #d0d8cf;
   height: 100vh;
   width: 100vw;
 }
