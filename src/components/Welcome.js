@@ -80,8 +80,9 @@ export default function Welcome() {
       </header>
       <div className="login-register-container">
         {isRegistering ? (
-          <div>
+          <div className="container-register">
             <input
+              className="email"
               type="email"
               placeholder="Email"
               value={registerInformation.email}
@@ -93,6 +94,7 @@ export default function Welcome() {
               }
             />
             <input
+              className="confirm-email"
               type="email"
               placeholder="Confirm email"
               value={registerInformation.confirmEmail}
@@ -104,6 +106,7 @@ export default function Welcome() {
               }
             />
             <input
+              className="password"
               type="password"
               placeholder="Password"
               value={registerInformation.password}
@@ -115,6 +118,7 @@ export default function Welcome() {
               }
             />
             <input
+              className="confirm-password"
               type="password"
               placeholder="Confirm Password"
               value={registerInformation.confirmPassword}
@@ -125,22 +129,22 @@ export default function Welcome() {
                 })
               }
             />
-            <button onClick={handleRegister}>Register</button>
-            <button onClick={() => setIsRegistering(false)}>Go Back</button>
+            <button className ="button-register" onClick={handleRegister}>Register</button>
+            <button  className ="button-back" onClick={() => setIsRegistering(false)}>Go Back</button>
           </div>
         ) : (
-          <div className="container">
+          <div className="container-login">
             <input
               className="email"
               type="email"
-              placeholder="email"
+              placeholder="Email"
               onChange={handleEmailChange}
               value={email}
             />
             <input
               className="password"
               type="password"
-              placeholder="password"
+              placeholder="Password"
               onChange={handlePasswordChange}
               value={password}
             />
