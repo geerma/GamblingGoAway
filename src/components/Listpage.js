@@ -25,7 +25,6 @@ export default function Listpage() {
       await deleteDoc(doc(db, "text", id));
     };
 
-
   return (
     <div>
       <div>

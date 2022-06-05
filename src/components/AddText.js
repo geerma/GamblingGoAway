@@ -10,7 +10,7 @@ export default function AddText() {
         if (text !== "") {
             await addDoc(collection(db, "text"), {
                 text,
-                completed: false,
+                otherField: "Null",
             });
             setText("");
         }
