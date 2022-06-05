@@ -1,12 +1,16 @@
 import React from "react";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth, rtdb } from "../firebase";
+import support from "../images/support.png";
+import slotmachine from "../images/slot-machine.png";
+import lotto from "../images/lotto.png";
 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { uid } from "uid";
 import { set, ref, onValue, remove } from "firebase/database";
+import Header from "./Header";
 
 export default function Homepage() {
   const [personalData, setPersonalData] = useState("");
@@ -61,37 +65,43 @@ export default function Homepage() {
 
   return (
     <div className="homepage">
-      <header className="header">
-        <h1>Gamble Go Away</h1>
-        <h2>A site for those trying not to gamble</h2>
-      </header>
+      <Header />
       <h1> Home Page </h1>
 
-      <button onClick={() => navigate("/slotmachine")}>Slot Machine</button>
-      <button onClick={() => navigate("/lottery")}>Lottery Page</button>
-      <button onClick={() => navigate("/supportpage")}>Support Page</button>
-      <button onClick={handleSignOut}>Sign Out</button>
-      <div>
-        {personalDatas.map((personalData) => (
-          <div key={personalData.uidd}>
-            <h2>
-              {personalData.personalData}{" "}
-              <button onClick={() => handleDelete(personalData.uidd)}>
-                Delete
-              </button>
-            </h2>
-          </div>
-        ))}
+      <div className="flex-container">
+      <div className="image-links">
+        <h2>Links</h2>
+        <a href="/slotmachine" title="slot icons from flaticon">
+          <img className="images" src={slotmachine} />
+        </a>
+        <a href="/lottery" title="lotto icons from flaticon">
+          <img className="images" src={lotto} />
+        </a>
+        <a href="/supportpage" title="team icons from flaticon">
+          <img className="images" src={support} />
+        </a>
       </div>
-      <div>
-        <input
-          type="text"
-          value={personalData}
-          onChange={(e) => setPersonalData(e.target.value)}
-        />
+      <div className="personal-container">
+        <h2>Personal Notes:</h2>
+        <div>
+          {personalDatas.map((personalData) => (
+            <div key={personalData.uidd}>
+                {personalData.personalData === undefined ? <p></p> : <h2 className="individual-personal">{personalData.personalData}</h2>}
+            </div>
+          ))}
+        </div>
+        <div>
+          <input
+            type="text"
+            value={personalData}
+            onChange={(e) => setPersonalData(e.target.value)}
+          />
 
-        <button onClick={writeToDatabase}>Add</button>
+          <button onClick={writeToDatabase}>Add</button>
+        </div>
       </div>
+      </div>
+      <footer className="footer">©2022 Copyright by geerma lilyyao14. All Rights Reserved. Images from https://www.flaticon.com</footer>
     </div>
   );
 }
