@@ -63,6 +63,7 @@ export default function Homepage() {
     <div>
       <h1> Home Page </h1>
 
+      <button onClick={() => navigate("/slotmachine")}>Slot Machine</button>
       <button onClick={() => navigate("/listpage")}>List Page</button>
       <button onClick={() => navigate("/lottery")}>Lottery Page</button>
       <button onClick={handleSignOut}>Sign Out</button>
