@@ -14,6 +14,7 @@ export default function Listpage() {
       const unsub = onSnapshot(q, (querySnapshot) => {
         let textArray = [];
         querySnapshot.forEach((doc) => {
+          console.log(doc.data());
           textArray.push({ ...doc.data(), id: doc.id});
         });
         setList(textArray);
