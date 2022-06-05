@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 export default function Lottery() {
   const navigate = useNavigate();
 
-  useEffect((navigate) => {
+  useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (!user) {
         navigate("/");
@@ -17,8 +17,8 @@ export default function Lottery() {
   }, []);
 
   return (
-    <div>
-      <h1> Lottery Here Boo!!!!!!! </h1>
+    <div className="lotterypage">
+      <h2> Lottery Here Boo!!!!!!! </h2>
     </div>
   );
 }
