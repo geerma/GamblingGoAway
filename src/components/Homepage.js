@@ -68,27 +68,29 @@ export default function Homepage() {
       <h1> Home Page </h1>
 
       <button onClick={() => navigate("/slotmachine")}>Slot Machine</button>
-      <button onClick={() => navigate("/listpage")}>List Page</button>
       <button onClick={() => navigate("/lottery")}>Lottery Page</button>
+      <button onClick={() => navigate("/supportpage")}>Support Page</button>
       <button onClick={handleSignOut}>Sign Out</button>
-
-      <input
-        type="text"
-        value={personalData}
-        onChange={(e) => setPersonalData(e.target.value)}
-      />
-
-      <button onClick={writeToDatabase}>Add</button>
-
       <div>
         {personalDatas.map((personalData) => (
           <div key={personalData.uidd}>
-            <h1>{personalData.personalData}</h1>
-            <button onClick={() => handleDelete(personalData.uidd)}>
-              Delete
-            </button>
+            <h2>
+              {personalData.personalData}{" "}
+              <button onClick={() => handleDelete(personalData.uidd)}>
+                Delete
+              </button>
+            </h2>
           </div>
         ))}
+      </div>
+      <div>
+        <input
+          type="text"
+          value={personalData}
+          onChange={(e) => setPersonalData(e.target.value)}
+        />
+
+        <button onClick={writeToDatabase}>Add</button>
       </div>
     </div>
   );
