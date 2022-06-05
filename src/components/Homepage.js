@@ -67,7 +67,8 @@ export default function Homepage() {
     <div className="homepage">
       <Header />
       <h1> Home Page </h1>
-
+      <p>Welcome to our site, Gamble Go Away. This site contains simulated gambling games, a support group/chat, and a personal note-pad to help jot down your emotions/thoughts!</p>
+      <p>This site will take in money, but after the end of a session / month, it will reimburse the user so that no money is lost. (Not implemented for hackathon purposes)</p>
       <div className="flex-container">
       <div className="image-links">
         <h2>Links</h2>

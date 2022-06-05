@@ -61,8 +61,8 @@ export default function Slotmachine() {
   // Also the payMoney() function serves as a way to simulate virtual payment when using the slot machine.
   const handleSlotMachine = () => {
     if (winner === false) {
-      setSlotOne(getRandomInt(5));
-      setSlotTwo(getRandomInt(5));
+      setSlotOne(getRandomInt(4));
+      setSlotTwo(getRandomInt(4));
       setSlotThree(getRandomInt(4));
       payMoney();
     }
