@@ -47,25 +47,92 @@
 .header h1 {
   color: black;
   font-family: "Sanchez", serif;
-  font-size: 50px;
-  padding-left: 30px;
+  font-size: 35px;
+  padding-left: 50px;
+  padding-top: 10px;
+  margin-top: 0px;
+  margin-bottom: 3px;
 }
 
 .header h2 {
   color: black;
   font-family: "Noto Sans", sans-serif;
-  font-size: 24px;
-  padding-left: 70px;
+  font-size: 18px;
+  padding-left: 100px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.navigation {
+  text-align: right;
+  position: absolute;
+  left: 63vw;
+  top: 3vh;
+  margin-right: 50px;
+  width: 33vw;
+}
+
+.navigation > button {
+  padding: 10px;
+  margin: 4px;
 }
 
 /* Home Page */
 
 .homepage {
   position: relative;
+  display: flexbox;
+  flex-direction: row;
   color: black;
   background-color: #e2ece1;
   height: 100vh;
   width: 100vw;
+}
+
+.image-links {
+  margin: 5px;
+  width: 63vw;
+}
+
+.images {
+  height: 30vh;
+  width: 15vw;
+  margin: 30px;
+  border: 15px solid rgb(115, 188, 228);
+  border-radius: 30px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.personal-container {
+  text-align: center;
+  width: 33vw;
+  height: 70vh;
+  margin: 5px;
+  border: 1px solid rgb(107, 107, 105);
+  border-radius: 5px;
+}
+
+.individual-personal {
+  color: black;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  width: 25vw;
+  margin: auto;
+  margin-top: 8px;
+  background-color: #79ee83;
+  border: 1px solid rgb(66, 65, 64);
+  border-radius: 80px;
+}
+
+.footer {
+  position: absolute;
+  text-align: center;
+  top: 97vh;
+  left: 1vw;
 }
 
 /* Slot Machine */
@@ -78,29 +145,67 @@
   width: 100vw;
 }
 
+.slotmachinepage-win {
+  position: relative;
+  color: black;
+  background-color: #FAD3BF;
+  height: 100vh;
+  width: 100vw;
+}
+
 .slotmachine {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #b4cecd;
-  width: 500px;
-  height: 100px;
-  border: 1px solid #000;
+  background: #D6DFE8;
+  
+  background: #d9a7c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fffcdc,
+    #d9a7c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fffcdc,
+    #d9a7c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 35vw;
+  height: 40vh;
+  border: 5px solid rgb(0, 0, 0);
   margin: auto;
 }
 
 .slots {
   padding: 8px;
   margin: 8px;
+  height: 9vh;
+  width: 4vw;
+  font-size: 25px;
   border: 1px solid #000;
+  background-color: #fff4f4;
+}
+
+.slotbutton {
+  margin: 20px;
+  padding: 12px;
+  height: 6vh;
+  width: 20vw;
+}
+
+.continuebutton {
+  margin: 20px;
+  padding: 12px;
+  height: 6vh;
+  width: 10vw;
 }
 
 .winning-text {
   font-size: 60px;
 }
 
-/* List Page */
-.listpage {
+/* Support Page */
+.supportpage {
   position: relative;
   color: black;
   background-color: #e2ece1;
@@ -118,9 +223,9 @@
 }
 
 .chat-container {
-  background: #fffffd;  /* fallback for old browsers */
+  background: #fffffd; /* fallback for old browsers */
   width: 70vw;
-  height: 70vh;
+  height: 60vh;
   border: 1px solid #000;
   margin: auto;
 }
@@ -132,17 +237,16 @@
   width: 30vw;
   margin: auto;
   margin-top: 8px;
-  background-color: #78C5EF;
+  background-color: #78c5ef;
   border: 1px solid rgb(66, 65, 64);
   border-radius: 80px;
 }
 
-
 .individual-chats button {
   width: 5px;
   height: 5px;
-  padding:0px;
-  background-color: #78C5EF;
+  padding: 0px;
+  background-color: #78c5ef;
   border: 1px solid rgb(114, 181, 236);
 }
 
@@ -150,7 +254,7 @@
 .lotterypage {
   position: relative;
   color: black;
-  background-color: #d0d8cf;
+  background-color: #e2ece1;
   height: 100vh;
   width: 100vw;
 }

@@ -12,6 +12,7 @@ import { db } from "../firebase";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import LotteryNumbers from "./LotteryNumbers";
+import Header from "./Header";
 
 export default function Lottery() {
 
@@ -31,7 +32,8 @@ export default function Lottery() {
   }, []);
 
 return (
-  <div className="listpage">
+  <div className="lotterypage">
+    <Header />
     <div>
       <h2> Lottery </h2>
     </div>

@@ -3,6 +3,7 @@ import AddText from "./AddText";
 import List from "./List";
 import { collection, query, onSnapshot, doc, deleteDoc, } from "firebase/firestore";
 import { db } from "../firebase";
+import Header from "./Header";
 
 export default function Supportpage() {
 
@@ -26,7 +27,8 @@ export default function Supportpage() {
     };
 
   return (
-    <div className="chatpage">
+    <div className="supportpage">
+      <Header />
       <div>
         <h1>Support Group</h1>
         <p>Welcome to the Support Group page! Joining a support group to meet and talk to others who have similar experiences can be one way of getting over your addiction.</p>
