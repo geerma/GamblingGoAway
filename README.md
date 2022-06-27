@@ -1,9 +1,14 @@
 # Gambling Go Away
 
-Welcome to our project "Gambling Go Away" for LaunchHacks 2022. Click [here](https://gambling-go-away.vercel.app/) to access the website.
+Welcome to our project "Gambling Go Away" for LaunchHacks 2022.
 
-## Demo Video
-Check out a video presentation and live demo [here](https://www.youtube.com/watch?v=xJaPZraCuUY).
+## Links
+
+[Presentation and Demo Video](https://www.youtube.com/watch?v=xJaPZraCuUY)
+
+[Website Link](https://gambling-go-away.vercel.app/)
+
+[Devpost](https://devpost.com/software/gambling-go-away)
 
 ## Inspiration
 Covid resulted in many unwanted effects, however one effect not commonly discussed is how covid led to a rise in gambling addictions. Our inspiration revolved around helping those who struggle with gambling and who had their support/help taken away by covid. Our goal was to create an application that could help those struggling with gambling by allowing them a place where they could get the same thrill but without the adverse effect of losing money. A place where they could reach out to others in the support group for help.
@@ -40,6 +45,3 @@ In the project directory, you can install dependencies and run using the command
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
